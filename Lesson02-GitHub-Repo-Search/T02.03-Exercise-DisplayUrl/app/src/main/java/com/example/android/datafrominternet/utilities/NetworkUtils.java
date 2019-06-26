@@ -15,11 +15,16 @@
  */
 package com.example.android.datafrominternet.utilities;
 
+import android.net.Uri;
+import android.util.Log;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * These utilities will be used to communicate with the network.
@@ -41,12 +46,26 @@ public class NetworkUtils {
     /**
      * Builds the URL used to query GitHub.
      *
+     *  source: https://api.github.com/search/repositories?q=android&sort=stars
+     *
      * @param githubSearchQuery The keyword that will be queried for.
      * @return The URL to use to query the GitHub server.
      */
     public static URL buildUrl(String githubSearchQuery) {
-        // TODO (1) Fill in this method to build the proper GitHub query URL
-        return null;
+        // COMPLETE (1) Fill in this method to build the proper GitHub query URL
+        Uri builtUri = Uri.parse(GITHUB_BASE_URL).buildUpon()
+                .appendQueryParameter(PARAM_QUERY,githubSearchQuery)
+                .appendQueryParameter(PARAM_SORT,sortBy)
+                .build();
+
+        URL url = null;
+        try {
+            url = new URL(builtUri.toString());
+        }catch (MalformedURLException e){
+            Log.d("MainActivity","Cannot create URL from malformed URI");
+        }
+
+        return url;
     }
 
     /**

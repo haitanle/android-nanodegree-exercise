@@ -15,6 +15,7 @@
  */
 package com.example.android.datafrominternet;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -71,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETE (14) Don't forgot to call .show() on your Toast
         // COMPLETE (15) If you do NOT handle the menu click, return super.onOptionsItemSelected to let Android handle the menu click
         if (item.getItemId() == R.id.action_search){
-            Toast.makeText(getApplicationContext(),"search clicked",Toast.LENGTH_LONG).show();
+            Context context = MainActivity.this;
+            Toast.makeText(context,"search clicked",Toast.LENGTH_LONG).show();
             return true;
         }
         return super.onOptionsItemSelected(item);
