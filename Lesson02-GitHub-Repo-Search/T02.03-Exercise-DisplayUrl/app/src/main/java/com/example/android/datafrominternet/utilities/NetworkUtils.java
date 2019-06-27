@@ -62,6 +62,7 @@ public class NetworkUtils {
         try {
             url = new URL(builtUri.toString());
         }catch (MalformedURLException e){
+            e.printStackTrace();
             Log.d("MainActivity","Cannot create URL from malformed URI");
         }
 

@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // Create Menu on startup
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
@@ -67,10 +68,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemThatWasClickedId = item.getItemId();
         if (itemThatWasClickedId == R.id.action_search) {
+
             // COMPLETE (4) Remove the Toast message when the search menu item is clicked
             // Context context = MainActivity.this;
             // String textToShow = "Search clicked";
             // Toast.makeText(context, textToShow, Toast.LENGTH_SHORT).show();
+
             // COMPLETE (5) Call makeGithubSearchQuery when the search menu item is clicked
             makeGithubSearchQuery();
             return true;
