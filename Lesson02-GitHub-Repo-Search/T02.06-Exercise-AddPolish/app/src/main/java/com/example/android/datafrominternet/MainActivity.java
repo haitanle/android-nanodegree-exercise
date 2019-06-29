@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
         // COMPLETE (26) Override onPreExecute to set the loading indicator to visible
         protected void onPreExecute(){
-            super.onPreExecute();
+//            super.onPreExecute();
             mDisplayProgressBar.setVisibility(View.VISIBLE);
         }
 
