@@ -23,7 +23,6 @@
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         android:fontFamily="monospace"
         android:textSize="42sp"
         android:gravity="center_vertical|start"
