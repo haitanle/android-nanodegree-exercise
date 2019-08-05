@@ -48,4 +48,9 @@
 
     <!-- Value in SharedPreferences for green color option -->
     <string name="pref_color_green_value" translatable="false">green</string>
+
+    <string name="pref_edit_measure_key" translatable="false">measure</string>
+    <string name="pref_edit_measure_title">Icon Size</string>
+    <string name="pref_edit_measure_default" translatable="false">1</string>
+
 </resources>
