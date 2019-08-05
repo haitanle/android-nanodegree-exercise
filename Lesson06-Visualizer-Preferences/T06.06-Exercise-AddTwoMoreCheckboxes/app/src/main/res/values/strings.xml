@@ -16,7 +16,17 @@
     <string name="pref_show_true">Shown</string>
     <string name="pref_show_false">Hidden</string>
 
-    <!-- TODO (2) Add all of the strings for the new checkboxes -->
+    <!-- done (2) Add all of the strings for the new checkboxes -->
+
+    <!-- Label for the show treble checkbox preference -->
+    <string name="pref_show_treble_label">Show Treble</string>
+    <!-- Key name for storing treble in SharedPreferences -->
+    <string name="pref_show_treble_key" translatable="false">show_treble</string>
+
+    <!-- Label for the show midi checkbox preference -->
+    <string name="pref_show_midi_label">Show Midi</string>
+    <!-- Key name for storing midi in SharedPreferences -->
+    <string name="pref_show_midi_key" translatable="false">show_midi</string>
 
     <!-- Value in SharedPreferences for red color option -->
     <string name="pref_color_red_value" translatable="false">red</string>
