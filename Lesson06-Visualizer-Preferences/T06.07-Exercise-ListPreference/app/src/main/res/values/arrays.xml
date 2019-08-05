@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- done (3) Add a res->values->arrays.xml file which contains two arrays, one for
+    labels and one for values. The arrays should contain strings found in res/values/strings.xml-->
+
+    <array name="color_array_label">
+        <item>@string/pref_color_red_label</item>
+        <item>@string/pref_color_green_label</item>
+        <item>@string/pref_color_blue_label</item>
+    </array>
+
+    <array name="color_array_value">
+        <item>@string/pref_color_red_value</item>
+        <item>@string/pref_color_green_value</item>
+        <item>@string/pref_color_blue_value</item>
+    </array>
+</resources>
