@@ -57,12 +57,20 @@ public class NotificationUtils {
     private static final int ACTION_DRINK_PENDING_INTENT_ID = 1;
     private static final int ACTION_IGNORE_PENDING_INTENT_ID = 14;
 
+    /**
+     * Clear Notification using System's notificationManager
+     * @param context
+     */
     public static void clearAllNotifications(Context context) {
         NotificationManager notificationManager = (NotificationManager)
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancelAll();
     }
 
+    /**
+     * Create the notification banner with channel if needed,
+     * @param context Context passed from MainActivity
+     */
     public static void remindUserBecauseCharging(Context context) {
         NotificationManager notificationManager = (NotificationManager)
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -93,6 +101,12 @@ public class NotificationUtils {
         }
         notificationManager.notify(WATER_REMINDER_NOTIFICATION_ID, notificationBuilder.build());
     }
+
+    /**
+     * Action for ignore passed to the Notification
+     * @param context
+     * @return
+     */
     private static Action ignoreReminderAction(Context context) {
         Intent ignoreReminderIntent = new Intent(context, WaterReminderIntentService.class);
         ignoreReminderIntent.setAction(ReminderTasks.ACTION_DISMISS_NOTIFICATION);
@@ -107,6 +121,11 @@ public class NotificationUtils {
         return ignoreReminderAction;
     }
 
+    /**
+     * Drink water Action passed to the Notification
+     * @param context
+     * @return
+     */
     private static Action drinkWaterAction(Context context) {
         Intent incrementWaterCountIntent = new Intent(context, WaterReminderIntentService.class);
         incrementWaterCountIntent.setAction(ReminderTasks.ACTION_INCREMENT_WATER_COUNT);
@@ -121,6 +140,11 @@ public class NotificationUtils {
         return drinkWaterAction;
     }
 
+    /**
+     * Create the Pending Intent for MainActivity
+     * @param context
+     * @return
+     */
     private static PendingIntent contentIntent(Context context) {
         Intent startActivityIntent = new Intent(context, MainActivity.class);
         return PendingIntent.getActivity(

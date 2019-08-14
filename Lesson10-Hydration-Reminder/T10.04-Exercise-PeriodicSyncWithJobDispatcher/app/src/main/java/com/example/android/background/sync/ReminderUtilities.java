@@ -38,6 +38,10 @@ public class ReminderUtilities {
 
     private static boolean sInitialized;
 
+    /**
+     * Create the Schedule using FireBaseJobDispatcher
+     * @param context
+     */
     synchronized public static void scheduleChargingReminder(@NonNull final Context context){
         if (sInitialized) return;
 
