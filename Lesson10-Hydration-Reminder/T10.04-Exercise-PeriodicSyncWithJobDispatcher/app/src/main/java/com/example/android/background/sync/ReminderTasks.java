@@ -26,6 +26,11 @@ public class ReminderTasks {
     public static final String ACTION_DISMISS_NOTIFICATION = "dismiss-notification";
     public static final String ACTION_CHARGING_REMINDER = "charging-reminder";
 
+    /**
+     * Depending on the Intent's action, perform following operations
+     * @param context
+     * @param action String - Intent's action
+     */
     public static void executeTask(Context context, String action) {
         if (ACTION_INCREMENT_WATER_COUNT.equals(action)) {
             incrementWaterCount(context);

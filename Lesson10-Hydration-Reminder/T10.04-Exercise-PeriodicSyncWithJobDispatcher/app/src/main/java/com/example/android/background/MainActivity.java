@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     /**
-     * Adds one to the water count and shows a toast
+     * Adds one to the water count and shows a toast based on button selection or service call
      */
     public void incrementWater(View view) {
         if (mToast != null) mToast.cancel();
