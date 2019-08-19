@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TODO (17) Surround the Constraint layout with a ScrollView -->
+<!-- done (17) Surround the Constraint layout with a ScrollView -->
 <!-- TODO (2) Replace the Relative layout with a ConstraintLayout -->
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<android.support.constraint.ConstraintLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- TODO (3) Create a TextView for the Passenger label and name -->
-    <!-- TODO (4) Use tools:text to set the text value -->
+    <!-- done (3) Create a TextView for the Passenger label and name -->
+    <!-- done (4) Use tools:text to set the text value -->
 
     <!-- TODO (5) Create an ImageView for the left rectangle -->
     <!-- TODO (6) Set the background to the shape_rectangle_stroke drawable -->
@@ -32,5 +38,51 @@
 
     <!-- TODO (14) Create an ImageView for the barcode -->
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="46dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="36dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passengerNameId"
+        app:srcCompat="@drawable/shape_rectangle_stroke"
+        tools:visibility="visible" />
 
+    <TextView
+        android:id="@+id/passengerNameLabelId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/passenger_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/passengerNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/passengerNameLabelId"
+        app:layout_constraintTop_toBottomOf="@+id/passengerNameLabelId"
+        tools:text="@string/passenger_name" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="51dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passengerNameId"
+        app:srcCompat="@drawable/shape_rectangle_stroke"
+        tools:visibility="visible" />
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
